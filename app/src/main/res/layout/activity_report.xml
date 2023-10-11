@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".reportActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- TextView for "Nama Dokter" -->
+        <TextView
+            android:id="@+id/textViewNamaDokter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Dokter"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"/>
+
+        <!-- TextView for "Nama Pasien" -->
+        <TextView
+            android:id="@+id/textViewNamaPasien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Pasien"
+            android:layout_below="@id/textViewNamaDokter"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"/>
+        <TextView
+            android:id="@+id/textViewNomorPasien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nomor Pasien"
+            android:layout_below="@id/textViewNamaPasien"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"/>
+        <TextView
+            android:id="@+id/textViewUsiaPasien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Usia "
+            android:layout_below="@id/textViewNomorPasien"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"/>
+        <TextView
+            android:id="@+id/textViewNomorHP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nomor HP "
+            android:layout_below="@id/textViewUsiaPasien"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"/>
+
+        <!-- Table for "Hasil" -->
+        <TableLayout
+            android:id="@+id/tableHasil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewNamaPasien"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="0dp">
+            <!-- Row 1 -->
+            <TableRow>
+                <!-- Column 1 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Identifikasi Risiko Kehamilan Trimester 3"
+                    android:padding="8dp"/>
+
+                <!-- Column 2 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Score"
+                    android:padding="8dp"/>
+            </TableRow>
+
+            <!-- Row 2 -->
+            <TableRow>
+                <!-- Column 1 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.Berdasarkan karakteristik ibu hamil"
+                    android:padding="8dp" />
+
+
+                <!-- Column 2 -->
+                <TextView
+                    android:id="@+id/score1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data 4"
+                    android:padding="8dp" />
+            </TableRow>
+            <TableRow>
+                <!-- Column 1 -->
+                <TextView
+                    android:id="@+id/keterangan1"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:padding="8dp" />
+
+
+
+            </TableRow>
+            <!-- Row 2 -->
+            <TableRow>
+                <!-- Column 1 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2.Berdasarkan riwayat penyakit dahulu"
+                    android:padding="8dp"/>
+
+                <!-- Column 2 -->
+                <TextView
+                    android:id="@+id/score2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data 4"
+                    android:padding="8dp"/>
+            </TableRow>
+            <TableRow>
+                <!-- Column 1 -->
+                <TextView
+                    android:id="@+id/keterangan2"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:padding="8dp" />
+
+
+
+            </TableRow>
+
+            <!-- Row 2 -->
+            <TableRow>
+                <!-- Column 1 -->
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="3. Berdasarkan riwayat kehamilan dan persalinan sebelumnya" />
+
+                <!-- Column 2 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data 4"
+                    android:id="@+id/score3"
+                    android:padding="8dp"/>
+            </TableRow>
+            <TableRow>
+                <!-- Column 1 -->
+                <TextView
+                    android:id="@+id/keterangan3"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:padding="8dp" />
+
+
+
+            </TableRow>
+
+            <!-- Row 2 -->
+            <TableRow>
+                <!-- Column 1 -->
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="4. Berdasarkan Penyakit yang dijumpai saat hamil"
+                    android:padding="8dp"/>
+
+                <!-- Column 2 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data 4"
+                    android:id="@+id/score4"
+                    android:padding="8dp"/>
+            </TableRow>
+            <TableRow>
+                <!-- Column 1 -->
+                <TextView
+                    android:id="@+id/keterangan4"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:padding="8dp" />
+
+
+
+            </TableRow>
+            <!-- Row 2 -->
+            <TableRow>
+                <!-- Column 1 -->
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="5. Berdasarkan kelainan kehamilan yang dijumpai"
+                    android:padding="8dp"/>
+
+                <!-- Column 2 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data 4"
+                    android:id="@+id/score5"
+                    android:padding="8dp"/>
+            </TableRow>
+            <TableRow>
+                <!-- Column 1 -->
+                <TextView
+                    android:id="@+id/keterangan5"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:padding="8dp" />
+
+
+
+            </TableRow>
+            <!-- Row 2 -->
+            <TableRow>
+                <!-- Column 1 -->
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="Total score"
+                    android:padding="8dp"
+                    android:textStyle="bold"/>
+
+                <!-- Column 2 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data 4"
+                    android:id="@+id/scoretotal"
+                    android:padding="8dp"/>
+            </TableRow>
+            <!-- Row 2 -->
+            <TableRow>
+                <!-- Column 1 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Low risk = 0-3 moderate risk 4-7 High risk >7"
+                    android:padding="8dp"/>
+            </TableRow>
+
+
+
+            <!-- TableRow(s) and cells can be added here for your table content -->
+            <!-- For example, you can use TableRow and TextView for table rows and data -->
+
+        </TableLayout>
+        <TextView
+            android:id="@+id/tindakan1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tindakan :"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/tableHasil"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/colorRed"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:textSize="22dp"/>
+        <TextView
+            android:id="@+id/tindakan2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tindakan :"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/tableHasil"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/colorYellow"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:textSize="22dp"/>
+        <TextView
+            android:id="@+id/tindakan3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tindakan :"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/tableHasil"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/colorGreen"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:textSize="22dp"/>
+
+
+        <TextView
+            android:id="@+id/Pilihrumahsakittext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Isi Rumah Sakit rujukan yang dituju : "
+            android:layout_marginTop="180dp"
+            android:layout_below="@id/tindakan3"
+            android:layout_marginLeft="20dp"
+             />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/isisendiri"
+            android:layout_below="@id/Pilihrumahsakittext"
+            android:layout_marginTop="10dp"
+            android:hint="Rumah sakit yang dituju"
+            android:layout_marginLeft="20dp"/>
+    </RelativeLayout>
+</ScrollView>

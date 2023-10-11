@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".question5">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/question5">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/questionTextView1"
+            android:text="Kelainan kehamilan yang dijumpai"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/questionTextView"
+            android:text="Ancaman abortus trimester 1"
+            android:textSize="14dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="10dp">
+        </TextView>
+
+        <RadioGroup
+            android:id="@+id/answerRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionTextView"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+            <RadioButton
+                android:id="@+id/optionA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ya" />
+
+            <RadioButton
+                android:id="@+id/optionB"
+                android:layout_marginTop="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tidak" />
+            <RadioButton
+                android:id="@+id/optionC"
+                android:layout_marginTop="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Not identified" />
+
+
+        </RadioGroup>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"
+            android:id="@+id/question3.2"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionTextView2"
+                android:text="Perkembangan Kehamilan"
+                android:textSize="14dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/answerRadioGroup2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionTextView2"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="10dp">
+
+                <RadioButton
+                    android:id="@+id/optionA2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kecil masa kehamilan" />
+                <RadioButton
+                    android:id="@+id/optionB2"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/optionA2"
+                    android:text="Besar masa kehamilan"
+
+                    />
+                <RadioButton
+                    android:id="@+id/optionC2"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/optionC2"
+                    android:text="Pertumbuhan janin terhambat"
+
+                    />
+                <RadioButton
+                    android:id="@+id/optionD2"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/optionA3"
+                    android:text="Tidak ada"/>
+                <RadioButton
+                    android:id="@+id/optionE2"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not identified" />
+
+                    />
+
+            </RadioGroup>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="690dp"
+            android:id="@+id/question3.3"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionTextView4"
+                android:text="Hipertensi dalam kehamilan"
+                android:textSize="14dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/answerRadioGroup4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionTextView4"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <RadioButton
+                    android:id="@+id/optionA4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya" />
+                <RadioButton
+                    android:id="@+id/optionB4"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Preeklamsia" />
+                <RadioButton
+                    android:id="@+id/optionC4"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Preeklamsia berat" />
+                <RadioButton
+                    android:id="@+id/optionD4"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak ada" />
+                <RadioButton
+                    android:id="@+id/optionE4"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not identified" />
+
+
+            </RadioGroup>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="500dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionTextView3"
+                android:text="Rhesus isoimmunisasi "
+                android:textSize="14dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/answerRadioGroup3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionTextView3"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <RadioButton
+                    android:id="@+id/optionA3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya" />
+
+                <RadioButton
+                    android:id="@+id/optionB3"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak" />
+                <RadioButton
+                    android:id="@+id/optionC3"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not identified" />
+            </RadioGroup>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="990dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionTextView5"
+                android:text="Kelainan bayi"
+                android:textSize="14dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/answerRadioGroup5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionTextView5"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <RadioButton
+                    android:id="@+id/optionA5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya" />
+
+                <EditText
+                    android:id="@+id/editTextOptionA5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:hint="apa kelainan bayi yang diderita"/>
+
+                <RadioButton
+                    android:id="@+id/optionB5"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak" />
+                <RadioButton
+                    android:id="@+id/optionC5"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not identified" />
+            </RadioGroup>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1200dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionTextView6"
+                android:text="Multiple Pregnancy"
+                android:textSize="14dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/answerRadioGroup6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionTextView6"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <RadioButton
+                    android:id="@+id/optionA6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya" />
+                <EditText
+                    android:id="@+id/editTextOptionA6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:hint="apa jenis multiple pregnancynya"/>
+
+                <RadioButton
+                    android:id="@+id/optionB6"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak" />
+                <RadioButton
+                    android:id="@+id/optionC6"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not identified" />
+            </RadioGroup>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1450dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionTextView7"
+                android:text="Kelainan letak/posisi dan presentasi"
+                android:textSize="14dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/answerRadioGroup7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionTextView7"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <RadioButton
+                    android:id="@+id/optionA7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya" />
+                <EditText
+                    android:id="@+id/editTextOptionA7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:hint="sebutkan jenis kelainan letaknya"/>
+
+                <RadioButton
+                    android:id="@+id/optionB7"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak" />
+                <RadioButton
+                    android:id="@+id/optionC7"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not identified" />
+            </RadioGroup>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1660dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionTextView8"
+                android:text="Perdarahan antepartum"
+                android:textSize="14dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/answerRadioGroup8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionTextView8"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <RadioButton
+                    android:id="@+id/optionA8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Plasenta preiva" />
+
+                <RadioButton
+                    android:id="@+id/optionB8"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Solusio plasenta" />
+                <RadioButton
+                    android:id="@+id/optionC8"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak ada" />
+                <RadioButton
+                    android:id="@+id/optionD8"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not identified" />
+            </RadioGroup>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1900dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionTextView9"
+                android:text="Plasenta akreta"
+                android:textSize="14dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/answerRadioGroup9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionTextView9"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <RadioButton
+                    android:id="@+id/optionA9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya" />
+
+                <RadioButton
+                    android:id="@+id/optionB9"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak" />
+                <RadioButton
+                    android:id="@+id/optionC9"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not identified" />
+            </RadioGroup>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2100dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionTextView10"
+                android:text="KPD, Kelainan air ketuban(Oligo/polihydramnion)"
+                android:textSize="14dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/answerRadioGroup10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionTextView10"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <RadioButton
+                    android:id="@+id/optionA10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya" />
+
+                <EditText
+                    android:id="@+id/editTextOptionA10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:hint="Oligo/polihydramnion"/>
+
+                <RadioButton
+                    android:id="@+id/optionB10"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak" />
+                <RadioButton
+                    android:id="@+id/optionC10"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not identified" />
+            </RadioGroup>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2330dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionTextView11"
+                android:text="Kelahiran premature mengancam"
+                android:textSize="14dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/answerRadioGroup11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionTextView11"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <RadioButton
+                    android:id="@+id/optionA11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya" />
+
+                <RadioButton
+                    android:id="@+id/optionB11"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak" />
+                <RadioButton
+                    android:id="@+id/optionC11"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not identified" />
+            </RadioGroup>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2530dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionTextView12"
+                android:text="CPD"
+                android:textSize="14dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/answerRadioGroup12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionTextView12"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <RadioButton
+                    android:id="@+id/optionA12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya" />
+
+                <RadioButton
+                    android:id="@+id/optionB12"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak" />
+                <RadioButton
+                    android:id="@+id/optionC12"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not identified" />
+            </RadioGroup>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2730dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionTextView13"
+                android:text="Kelainan Jalan Lahir"
+                android:textSize="14dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/answerRadioGroup13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionTextView13"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <RadioButton
+                    android:id="@+id/optionA13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya" />
+                <EditText
+                    android:id="@+id/editTextOptionA13"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:hint="Jenis kelainan jalan lahir"/>
+
+                <RadioButton
+                    android:id="@+id/optionB13"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak" />
+                <RadioButton
+                    android:id="@+id/optionC13"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not identified" />
+            </RadioGroup>
+
+        </RelativeLayout>
+        <Button
+            android:id="@+id/continueButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2930dp"
+            android:text="Continue"
+            />
+
+
+
+
+
+
+    </RelativeLayout>
+</ScrollView>

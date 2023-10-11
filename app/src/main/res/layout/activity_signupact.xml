@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.165">
+        <TextView
+            android:id="@+id/textsignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign up"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.084"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+
+            app:layout_constraintVertical_bias="0.054"
+            />
+        <TextView
+            android:id="@+id/textNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            tools:layout_editor_absoluteX="41dp"
+            tools:layout_editor_absoluteY="204dp"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            />
+
+
+        <EditText
+            android:id="@+id/editTextNama"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            tools:layout_editor_absoluteX="31dp"
+            tools:layout_editor_absoluteY="227dp" />
+        <TextView
+            android:id="@+id/textPekerjaan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pekerjaan :"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            tools:layout_editor_absoluteX="43dp"
+            tools:layout_editor_absoluteY="319dp" />
+
+        <CheckBox
+            android:id="@+id/checkBoxDrOb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dokter Obgyn"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="345dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"/>
+
+        <CheckBox
+            android:id="@+id/checkBoxDumum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dokter umum"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="407dp"
+            android:layout_marginLeft="10dp"/>
+
+        <CheckBox
+            android:id="@+id/checkBoxBid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bidan"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="466dp"
+            android:layout_marginLeft="10dp"/>
+
+        <Button
+            android:id="@+id/buttonsignup"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="300dp"
+            android:text="Sign up"
+            android:layout_marginLeft="45dp"/>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

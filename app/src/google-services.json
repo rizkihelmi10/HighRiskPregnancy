@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1044932998423",
+    "project_id": "highriskpregnancy-4372e",
+    "storage_bucket": "highriskpregnancy-4372e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044932998423:android:8693d56581d8f2c442f352",
+        "android_client_info": {
+          "package_name": "com.kamus.highriskpregnancy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoUEE8XCgsZAeS1SXlnSQiNULU04ZENA8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

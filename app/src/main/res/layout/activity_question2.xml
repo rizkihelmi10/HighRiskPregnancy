@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".question1">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/question1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/questionTextView1"
+            android:text="Riwayat Penyakit Dahulu "
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/questionTextViewket"
+            android:text="(sudah dinyatakan sembuh atau terkontrol obat) "
+            android:textSize="14dp"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/questionTextView"
+            android:text="Penyakit jantung dan kardiovascular termasuk hipertensi"
+            android:textSize="14dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="10dp">
+        </TextView>
+
+        <RadioGroup
+            android:id="@+id/answerRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionTextView"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+            <RadioButton
+                android:id="@+id/optionA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ya" />
+
+            <EditText
+                android:id="@+id/editTextOptionA"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="apa saja penyakit jantung yang diderita"
+                android:visibility="gone"/>
+
+            <RadioButton
+                android:id="@+id/optionB"
+                android:layout_marginTop="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tidak" />
+
+
+        </RadioGroup>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionTextView2"
+                android:text="Penyakit paru-paru (Asma, TB, dll)"
+                android:textSize="14dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/answerRadioGroup2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionTextView2"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <RadioButton
+                    android:id="@+id/optionA2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya" />
+
+                <EditText
+                    android:id="@+id/editTextOptionA2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:hint="apa saja penyakit paru yang diderita"/>
+
+                <RadioButton
+                    android:id="@+id/optionB2"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak" />
+            </RadioGroup>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="400dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionTextView3"
+                android:text="Penyakit Syaraf (Epilepsi)"
+                android:textSize="14dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/answerRadioGroup3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionTextView3"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <RadioButton
+                    android:id="@+id/optionA3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya" />
+
+                <EditText
+                    android:id="@+id/editTextOptionA3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:hint="apa saja penyakit syaraf yang diderita"/>
+
+                <RadioButton
+                    android:id="@+id/optionB3"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak" />
+            </RadioGroup>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="600dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionTextView4"
+                android:text="Penyakit hati "
+                android:textSize="14dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/answerRadioGroup4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionTextView4"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <RadioButton
+                    android:id="@+id/optionA4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya" />
+
+                <EditText
+                    android:id="@+id/editTextOptionA4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:hint="apa saja penyakit hati yang diderita"/>
+
+                <RadioButton
+                    android:id="@+id/optionB4"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak" />
+            </RadioGroup>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="800dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionTextView5"
+                android:text="Penyakit ginjal"
+                android:textSize="14dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/answerRadioGroup5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionTextView5"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <RadioButton
+                    android:id="@+id/optionA5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya" />
+
+                <EditText
+                    android:id="@+id/editTextOptionA5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:hint="apa saja penyakit ginjal yang diderita"/>
+
+                <RadioButton
+                    android:id="@+id/optionB5"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak" />
+            </RadioGroup>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1000dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionTextView6"
+                android:text="Penyakit kelainan darah"
+                android:textSize="14dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/answerRadioGroup6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionTextView6"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+
+                <RadioButton
+                    android:id="@+id/optionA6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya" />
+
+                <EditText
+                    android:id="@+id/editTextOptionA6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:hint="apa saja penyakit kelainan darah yang diderita"/>
+
+                <RadioButton
+                    android:id="@+id/optionB6"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak" />
+            </RadioGroup>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1200dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionTextView7"
+                android:text="Penyakit kelainan endokrin (diabetes,tiroid)"
+                android:textSize="14dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/answerRadioGroup7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionTextView7"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <RadioButton
+                    android:id="@+id/optionA7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya" />
+
+                <EditText
+                    android:id="@+id/editTextOptionA7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:hint="apa saja penyakit kelainan endokrin yang diderita"/>
+
+                <RadioButton
+                    android:id="@+id/optionB7"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak" />
+            </RadioGroup>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1600dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionTextView8"
+                android:text="Penyakit autoimune dan jaringan ikat"
+                android:textSize="14dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/answerRadioGroup8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionTextView8"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <RadioButton
+                    android:id="@+id/optionA8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya" />
+
+                <EditText
+                    android:id="@+id/editTextOptionA8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:hint="apa saja penyakit autoimune yang diderita"/>
+
+                <RadioButton
+                    android:id="@+id/optionB8"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak" />
+            </RadioGroup>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1800dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionTextView10"
+                android:text="Penyakit infeksi(HIV, Sipilis, hepatitis, TORCH, Penyakit Menular Seksual)"
+                android:textSize="14dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/answerRadioGroup10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionTextView10"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <RadioButton
+                    android:id="@+id/optionA10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya" />
+
+                <EditText
+                    android:id="@+id/editTextOptionA10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:hint="apa saja penyakit infeksi yang diderita"/>
+
+                <RadioButton
+                    android:id="@+id/optionB10"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak" />
+            </RadioGroup>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1390dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionTextView9"
+                android:text="Penyakit kanker"
+                android:textSize="14dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/answerRadioGroup9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionTextView9"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <RadioButton
+                    android:id="@+id/optionA9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya" />
+
+                <EditText
+                    android:id="@+id/editTextOptionA9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:hint="apa penyakit kanker yang diderita"/>
+
+                <RadioButton
+                    android:id="@+id/optionB9"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak" />
+            </RadioGroup>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2000dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionTextView11"
+                android:text="Pernah operasi uterus, serviks dan vagina"
+                android:textSize="14dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/answerRadioGroup11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionTextView11"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <RadioButton
+                    android:id="@+id/optionA11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya" />
+                <EditText
+                    android:id="@+id/editTextOptionA11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:hint="apa tindakan yang dilakukan"/>
+
+
+                <RadioButton
+                    android:id="@+id/optionB11"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak" />
+            </RadioGroup>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2200dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionTextView12"
+                android:text="Penyakit kelainan mental"
+                android:textSize="14dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/answerRadioGroup12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionTextView12"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <RadioButton
+                    android:id="@+id/optionA12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya" />
+
+                <EditText
+                    android:id="@+id/editTextOptionA12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:hint="apa penyakit kelainan mental yang diderita"/>
+
+                <RadioButton
+                    android:id="@+id/optionB12"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak" />
+            </RadioGroup>
+
+        </RelativeLayout>
+        <Button
+            android:id="@+id/continueButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2500dp"
+            android:text="Continue"
+            />
+
+    </RelativeLayout>
+</ScrollView>

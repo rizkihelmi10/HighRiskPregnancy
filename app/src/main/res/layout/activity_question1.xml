@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".question1">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/question1">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/questionTextView1"
+        android:text="Karakteristik Ibu hamil"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp">
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/questionTextView"
+        android:text="Usia Ibu hamil?"
+        android:textSize="14dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp">
+    </TextView>
+
+    <RadioGroup
+        android:id="@+id/answerRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/questionTextView"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp">
+
+        <RadioButton
+            android:id="@+id/optionA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dibawah 20 tahun" />
+
+        <RadioButton
+            android:id="@+id/optionB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Antara 20 hingga 35 tahun" />
+
+        <RadioButton
+            android:id="@+id/optionC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diatas 35 tahun" />
+    </RadioGroup>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/questionTextView2"
+            android:text="Lingkar tengah lengan atas"
+            android:textSize="14dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp">
+        </TextView>
+
+        <RadioGroup
+            android:id="@+id/answerRadioGroup2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionTextView2"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+            <RadioButton
+                android:id="@+id/optionA2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dibawah 22.5 cm" />
+
+            <RadioButton
+                android:id="@+id/optionB2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diantara 22.5 cm hingga 30 cm" />
+
+            <RadioButton
+                android:id="@+id/optionC2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diatas 30 cm" />
+        </RadioGroup>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/questionTextView3"
+            android:text="Masalah Psikososial :"
+            android:textSize="14dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp">
+        </TextView>
+
+        <RadioGroup
+            android:id="@+id/answerRadioGroup3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionTextView3"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+                <RadioButton
+                    android:id="@+id/optionA3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Unwanted Pregnancy" />
+
+
+
+        </RadioGroup>
+        <RadioGroup
+            android:id="@+id/answerRadioGroup3a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionTextView3"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+        <RadioButton
+            android:id="@+id/optionB3"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/optionA3"
+            android:text="Unsuppoerted"
+
+            />
+        </RadioGroup>
+        <RadioGroup
+            android:id="@+id/answerRadioGroup3b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionTextView3"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+            <RadioButton
+                android:id="@+id/optionC3"
+                android:layout_marginTop="60dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/optionA3"
+                android:text="KDRT"
+
+                />
+        </RadioGroup>
+        <RadioGroup
+            android:id="@+id/answerRadioGroup3c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionTextView3"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+            <RadioButton
+                android:id="@+id/optionD3"
+                android:layout_marginTop="90dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/optionA3"
+                android:text="Tuna Wisma"
+
+                />
+        </RadioGroup>
+        <RadioGroup
+            android:id="@+id/answerRadioGroup3d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionTextView3"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+            <RadioButton
+                android:id="@+id/optionE3"
+                android:layout_marginTop="120dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/optionA3"
+                android:text="Tidak ada"
+
+                />
+        </RadioGroup>
+        <RadioGroup
+            android:id="@+id/answerRadioGroup3e"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionTextView3"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+            <RadioButton
+                android:id="@+id/optionF3"
+                android:layout_marginTop="150dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/optionA3"
+                android:text="Lainnya"
+
+
+                />
+            <EditText
+                android:layout_width="100dp"
+                android:id="@+id/editTextForCheckBox1"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:hint="Lainnya"
+                android:visibility="gone"
+                />
+
+
+
+
+        </RadioGroup>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resetbutton1"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="245dp"
+            android:text="Reset Answer"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="700dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/questionTextView4"
+            android:text="Terpapar zat berbahaya :"
+            android:textSize="14dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp">
+        </TextView>
+
+        <RadioGroup
+            android:id="@+id/answerRadioGroup4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionTextView4"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+            <RadioButton
+                android:id="@+id/optionA4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Merokok" />
+
+
+
+        </RadioGroup>
+        <RadioGroup
+            android:id="@+id/answerRadioGroup4a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionTextView4"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+            <RadioButton
+                android:id="@+id/optionB4"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/optionA4"
+                android:text="Alkohol"
+
+                />
+        </RadioGroup>
+        <RadioGroup
+            android:id="@+id/answerRadioGroup4b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionTextView4"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+            <RadioButton
+                android:id="@+id/optionC4"
+                android:layout_marginTop="60dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/optionA4"
+                android:text="obat berbahaya"
+
+                />
+        </RadioGroup>
+        <RadioGroup
+            android:id="@+id/answerRadioGroup4c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionTextView4"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+            <RadioButton
+                android:id="@+id/optionD4"
+                android:layout_marginTop="90dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/optionA4"
+                android:text="Zat berbahaya paparan dari tempat kerja"
+
+                />
+        </RadioGroup>
+        <RadioGroup
+            android:id="@+id/answerRadioGroup4d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionTextView4"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+            <RadioButton
+                android:id="@+id/optionE4"
+                android:layout_marginTop="120dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/optionA4"
+                android:text="Tidak ada"
+
+                />
+        </RadioGroup>
+        <RadioGroup
+            android:id="@+id/answerRadioGroup4e"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionTextView4"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+            <RadioButton
+                android:id="@+id/optionF4"
+                android:layout_marginTop="150dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/optionA4"
+                android:text="Lainnya"
+
+
+                />
+            <EditText
+                android:layout_width="100dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/editTextForCheckBox2"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:hint="Lainnya"
+                android:visibility="gone"
+                />
+        </RadioGroup>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resetbutton2"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="245dp"
+            android:text="Reset Answer"
+            android:visibility="gone"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1000dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/questionTextView5"
+            android:text="ANC pertama kali lebih dari 20 minggu lalu :"
+            android:textSize="14dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp">
+        </TextView>
+
+        <RadioGroup
+            android:id="@+id/answerRadioGroup5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionTextView5"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+            <RadioButton
+                android:id="@+id/optionA5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ya" />
+
+            <RadioButton
+                android:id="@+id/optionB5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tidak" />
+        </RadioGroup>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1150dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/questionTextView6"
+            android:text="Tidak pernah ANC sebelumnya"
+            android:textSize="14dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp">
+        </TextView>
+
+        <RadioGroup
+            android:id="@+id/answerRadioGroup6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionTextView6"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+            <RadioButton
+                android:id="@+id/optionA6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ya" />
+
+            <RadioButton
+                android:id="@+id/optionB6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tidak" />
+        </RadioGroup>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1300dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/questionTextView7"
+            android:text="Status kehamilan:"
+            android:textSize="14dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp">
+        </TextView>
+
+        <RadioGroup
+            android:id="@+id/answerRadioGroup7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionTextView7"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+            <RadioButton
+                android:id="@+id/optionA7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Primigravida" />
+
+            <RadioButton
+                android:id="@+id/optionB7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grande Multipara (gravida>5)" />
+            <RadioButton
+                android:id="@+id/optionC7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bukan keduanya" />
+        </RadioGroup>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1300dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/questionTextView8"
+            android:text="Riwayat Infertil"
+            android:textSize="14dp"
+            android:layout_marginTop="220dp"
+            android:layout_marginLeft="10dp">
+        </TextView>
+
+        <RadioGroup
+            android:id="@+id/answerRadioGroup8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionTextView8"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+            <RadioButton
+                android:id="@+id/optionA8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ya" />
+
+            <RadioButton
+                android:id="@+id/optionB8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tidak" />
+        </RadioGroup>
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/continueButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1700dp"
+        android:text="Continue"
+        />
+
+</RelativeLayout>
+</ScrollView>
