@@ -2,11 +2,15 @@ package com.kamus.highriskpregnancy;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -35,6 +39,15 @@ public class MainActivity extends AppCompatActivity {
         greetings = findViewById(R.id.greeting);
         checkConfigDB();
         greetings();
+        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
+        }
+     /*   if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, 1);
+        } else {
+            // You already have the camera permission.
+            // You can proceed with capturing images.
+        }*/
 
         cekrisiko.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void greetings(){
         String namadokter = db.getResult(dbhelper,"name",null);
-        greetings.setText("Welcome, dr. " + namadokter);
+        greetings.setText("Welcome,  " + namadokter);
 
     }
 

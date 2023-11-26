@@ -24,7 +24,7 @@
             android:layout_width="350dp"
             android:layout_height="80dp"
             android:background="@drawable/buttonshaped"
-            android:text="Pasien Baru" />
+            android:text="Masukkan data pasien" />
 
         <Button
             android:id="@+id/buttonold"
@@ -32,7 +32,8 @@
             android:layout_marginTop="20dp"
             android:layout_height="80dp"
             android:background="@drawable/buttonshaped"
-            android:text="Pasien Lama" />
+            android:text="Pasien Lama"
+            android:visibility="gone"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

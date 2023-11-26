@@ -146,7 +146,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/optionA3"
-            android:text="Unsuppoerted"
+            android:text="Unsupported"
 
             />
         </RadioGroup>
@@ -396,7 +396,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/questionTextView5"
-            android:text="ANC pertama kali lebih dari 20 minggu lalu :"
+            android:text="ANC pertama kali lebih dari 20 minggu usia kehamilan :"
             android:textSize="14dp"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="10dp">
@@ -433,7 +433,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/questionTextView6"
-            android:text="Tidak pernah ANC sebelumnya"
+            android:text="Pernahkah dilakukan ANC  sebelumnya"
             android:textSize="14dp"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="10dp">
@@ -499,6 +499,11 @@
                 android:id="@+id/optionC7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Nullipara" />
+            <RadioButton
+                android:id="@+id/optionD7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="Bukan keduanya" />
         </RadioGroup>
 
@@ -506,7 +511,7 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1300dp"
+        android:layout_marginTop="1350dp"
         >
         <TextView
             android:layout_width="wrap_content"

@@ -34,7 +34,7 @@
             android:id="@+id/NoPasien"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nomor Pasien"
+            android:text="Nomor Pasien (Nomor RM)"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="10dp"
             android:textSize="15dp"/>
@@ -51,7 +51,7 @@
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nama Pasien"
+            android:text="Nama Pasien (sesuai KTP)"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="10dp"
             android:textSize="15dp"/>
@@ -82,12 +82,30 @@
             android:layout_marginLeft="10dp"
             android:inputType="text"
            />
+        <TextView
+            android:id="@+id/textView51"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama FKTP/FKRTL"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="15dp"/>
+
+        <EditText
+            android:id="@+id/editTextText31"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginLeft="10dp"
+            android:inputType="text"
+            />
+
 
         <TextView
             android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nomor KTP"
+            android:text="Nomor BPJS/KTP"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="10dp"
             android:textSize="15dp"/>
@@ -100,6 +118,13 @@
             android:inputType="text"
             android:layout_marginLeft="10dp"
              />
+      <!--  <Button
+            android:id="@+id/button2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Capture KTP" />-->
 
         <TextView
             android:id="@+id/textView7"

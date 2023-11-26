@@ -505,10 +505,11 @@
 
                 <EditText
                     android:id="@+id/editTextOptionA10"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:visibility="gone"
-                    android:hint="Oligo/polihydramnion"/>
+                    android:hint="Oligo/polihydramnion"
+                    />
 
                 <RadioButton
                     android:id="@+id/optionB10"
@@ -642,8 +643,8 @@
                     android:layout_height="wrap_content"
                     android:text="Ya" />
                 <EditText
-                    android:id="@+id/editTextOptionA13"
-                    android:layout_width="match_parent"
+                    android:id="@+id/editTextOptionA13marked"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:visibility="gone"
                     android:hint="Jenis kelainan jalan lahir"/>
@@ -668,7 +669,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="2930dp"
+            android:layout_marginTop="3000dp"
             android:text="Continue"
             />
 

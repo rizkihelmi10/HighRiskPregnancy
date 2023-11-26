@@ -40,6 +40,8 @@ public class question2 extends AppCompatActivity {
     int score1;
     String childkey2;
     String childkey1;
+    String patientChildkey;
+    String statusChildkey;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -49,8 +51,11 @@ public class question2 extends AppCompatActivity {
         Intent intent = getIntent();
         score1 = intent.getIntExtra("score1", 0);
         childkey1 = intent.getStringExtra("childkey1");
+        patientChildkey = intent.getStringExtra("childkeyPatient");
+        statusChildkey = intent.getStringExtra("childkeystatus");
+        Log.d("Childkeystatonq2", "onDataChange: " + statusChildkey);
         Toast.makeText(this,"score 1 = " +score1, Toast.LENGTH_SHORT).show();
-        Toast.makeText(this,"childkey 1 = " +childkey1, Toast.LENGTH_SHORT).show();
+     //   Toast.makeText(this,"childkey 1 = " +childkey1, Toast.LENGTH_SHORT).show();
 
         answerRadioGroup = findViewById(R.id.answerRadioGroup);
         answerRadioGroup2 = findViewById(R.id.answerRadioGroup2);
@@ -324,7 +329,23 @@ public class question2 extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Anda harus mengisi semua pertanyaan",Toast.LENGTH_LONG).show();
                 }else {
                     getscore();
-                    String selectedAnswer1 = getSelectedAnswer(answerRadioGroup);
+                    AnswerModel2 answerModel2 = new AnswerModel2();
+
+                    answerModel2.setAnswer1(getSelectedAnswer(answerRadioGroup, R.id.editTextOptionA));
+                    answerModel2.setAnswer2(getSelectedAnswer(answerRadioGroup2, R.id.editTextOptionA2));
+                    answerModel2.setAnswer3(getSelectedAnswer(answerRadioGroup3, R.id.editTextOptionA3));
+                    answerModel2.setAnswer4(getSelectedAnswer(answerRadioGroup4, R.id.editTextOptionA4));
+                    answerModel2.setAnswer5(getSelectedAnswer(answerRadioGroup5, R.id.editTextOptionA5));
+                    answerModel2.setAnswer6(getSelectedAnswer(answerRadioGroup6, R.id.editTextOptionA6));
+                    answerModel2.setAnswer7(getSelectedAnswer(answerRadioGroup7, R.id.editTextOptionA7));
+                    answerModel2.setAnswer8(getSelectedAnswer(answerRadioGroup8, R.id.editTextOptionA8));
+                    answerModel2.setAnswer9(getSelectedAnswer(answerRadioGroup9, R.id.editTextOptionA9));
+                    answerModel2.setAnswer10(getSelectedAnswer(answerRadioGroup10, R.id.editTextOptionA10));
+                    answerModel2.setAnswer11(getSelectedAnswer(answerRadioGroup11, R.id.editTextOptionA11));
+                    answerModel2.setAnswer12(getSelectedAnswer(answerRadioGroup12, R.id.editTextOptionA12));
+
+                    saveAnswersToFirebase(answerModel2);
+                /*    String selectedAnswer1 = getSelectedAnswer(answerRadioGroup);
                     String selectedAnswer2 = getSelectedAnswer(answerRadioGroup2);
                     String selectedAnswer3 = getSelectedAnswer(answerRadioGroup3);
                     String selectedAnswer4 = getSelectedAnswer(answerRadioGroup4);
@@ -572,14 +593,33 @@ public class question2 extends AppCompatActivity {
                         answerModel2.setAnswer12(selectedAnswer12);
 
                         // Save the data to Firebase
-                        saveAnswersToFirebase(answerModel2);
+                        saveAnswersToFirebase(answerModel2);*/
+
 
                     }
 
                 }
 
-            }
+
         });
+
+    }
+    private String getSelectedAnswer(RadioGroup radioGroup, int editTextId) {
+        int selectedId = radioGroup.getCheckedRadioButtonId();
+        String answer = "";
+        if (selectedId != -1) {
+            RadioButton radioButton = findViewById(selectedId);
+            answer = radioButton.getText().toString();
+        }
+
+        EditText editText = findViewById(editTextId);
+        String editTextValue = editText.getText().toString().trim();
+
+        if (!editTextValue.isEmpty()) {
+            answer = (answer.isEmpty() ? "" : " ") + editTextValue;
+        }
+
+        return answer;
     }
     private String getSelectedAnswer(RadioGroup radioGroup) {
         int selectedId = radioGroup.getCheckedRadioButtonId();
@@ -653,12 +693,15 @@ public class question2 extends AppCompatActivity {
                     Log.d("FirebaseData2", "Child Key: " + childkey2);
                     Log.d("FirebaseData2", "Answer Model: " + answerModel.toString());
                     Toast.makeText(getApplicationContext(), "total score :" + calctotalscore2, Toast.LENGTH_SHORT).show();
-                    Toast.makeText(getApplicationContext(), "key:" + childkey2, Toast.LENGTH_SHORT).show();
+                  //  Toast.makeText(getApplicationContext(), "key:" + childkey2, Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(question2.this, question3.class);
                     intent.putExtra("score2", calctotalscore2);
                     intent.putExtra("childkey2",childkey2);
                     intent.putExtra("score1", score1);
                     intent.putExtra("childkey1",childkey1);
+                    intent.putExtra("childkeyPatient", patientChildkey);
+                    intent.putExtra("childkeystatust", statusChildkey);
+                    Log.d("Childkeystatonq2", "onDataChange: " + statusChildkey);
                     startActivity(intent);
                 }
             }

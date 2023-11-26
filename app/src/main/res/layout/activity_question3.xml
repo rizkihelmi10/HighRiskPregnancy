@@ -47,9 +47,11 @@
 
             <EditText
                 android:id="@+id/editTextOptionA"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:visibility="gone"/>
+                android:hint="Abortus/abortus berulang"
+                android:visibility="gone"
+                />
 
             <RadioButton
                 android:id="@+id/optionB"
@@ -501,7 +503,7 @@
                     android:layout_marginTop="0dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Vorcep" />
+                    android:text="Forcep" />
                 <RadioButton
                     android:id="@+id/optionC11"
                     android:layout_marginTop="0dp"

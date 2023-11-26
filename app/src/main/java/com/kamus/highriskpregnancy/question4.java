@@ -3,6 +3,7 @@ package com.kamus.highriskpregnancy;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -86,6 +87,7 @@ public class question4 extends AppCompatActivity {
     private EditText editTextOptionA10;
     private EditText editTextOptionA11;
     private EditText editTextOptionA12;
+    private EditText editTextOptionA;
 
     private Button continueButton;
     int calctotalscore4;
@@ -96,28 +98,34 @@ public class question4 extends AppCompatActivity {
     String childkey1;
     String childkey3;
     String childkey4;
+    String patientChildkey;
+    String statusChildkey;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question4);
         Intent intent = getIntent();
+        patientChildkey = intent.getStringExtra("childkeyPatient");
         score1 = intent.getIntExtra("score1", 0);
         childkey1 = intent.getStringExtra("childkey1");
         childkey2 = intent.getStringExtra("childkey2");
         score2 = intent.getIntExtra("score2",0);
         childkey3 = intent.getStringExtra("childkey3");
         score3 = intent.getIntExtra("score3",0);
+        statusChildkey = intent.getStringExtra("childkeystatust");
+        Log.d("Childkeystatonq4", "onDataChange: " + statusChildkey);
         Log.d("what is passed?", "onCreate: " + score3);
         Log.d("what is passed?", "onCreate: " + childkey2);
         Log.d("what is passed?", "onCreate: " + childkey3);
 
         Toast.makeText(this,"score 1 = " +score1, Toast.LENGTH_SHORT).show();
-        Toast.makeText(this,"childkey 1 = " +childkey1, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this,"childkey 1 = " +childkey1, Toast.LENGTH_SHORT).show();
         Toast.makeText(this,"score 2 = " +score2, Toast.LENGTH_SHORT).show();
-        Toast.makeText(this,"childkey 2 = " +childkey2, Toast.LENGTH_SHORT).show();
+      //  Toast.makeText(this,"childkey 2 = " +childkey2, Toast.LENGTH_SHORT).show();
         Toast.makeText(this,"score 3 = " +score3, Toast.LENGTH_SHORT).show();
-        Toast.makeText(this,"childkey 3 = " +childkey3, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this,"childkey 3 = " +childkey3, Toast.LENGTH_SHORT).show();
         answerRadioGroup1 = findViewById(R.id.answerRadioGroup);
         answerRadioGroup2 = findViewById(R.id.answerRadioGroup2);
         answerRadioGroup3 = findViewById(R.id.answerRadioGroup3);
@@ -170,6 +178,7 @@ public class question4 extends AppCompatActivity {
         optionC12 = findViewById(R.id.optionC12);
 
         // Initialize EditTexts for specific questions
+        editTextOptionA = findViewById(R.id.editTextOptionA);
         editTextOptionA2 = findViewById(R.id.editTextOptionA2);
         editTextOptionA3 = findViewById(R.id.editTextOptionA3);
         editTextOptionA4 = findViewById(R.id.editTextOptionA4);
@@ -189,6 +198,12 @@ public class question4 extends AppCompatActivity {
 
     }
     public void radiofunc(){
+        optionA.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                editTextOptionA.setText("Anemia");
+            }
+        });
 
         optionA2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -365,239 +380,62 @@ public class question4 extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Anda harus mengisi semua pertanyaan", Toast.LENGTH_LONG).show();
                 } else {
                     getscore();
-                    String selectedAnswer1 = getSelectedAnswer(answerRadioGroup1);
-                    String selectedAnswer2 = getSelectedAnswer(answerRadioGroup2);
-                    String selectedAnswer3 = getSelectedAnswer(answerRadioGroup3);
-                    String selectedAnswer4 = getSelectedAnswer(answerRadioGroup4);
-                    String selectedAnswer5 = getSelectedAnswer(answerRadioGroup5);
-                    String selectedAnswer6 = getSelectedAnswer(answerRadioGroup6);
-                    String selectedAnswer7 = getSelectedAnswer(answerRadioGroup7);
-                    String selectedAnswer8 = getSelectedAnswer(answerRadioGroup8);
-                    String selectedAnswer9 = getSelectedAnswer(answerRadioGroup9);
-                    String selectedAnswer10 = getSelectedAnswer(answerRadioGroup10);
-                    String selectedAnswer11 = getSelectedAnswer(answerRadioGroup11);
-                    String selectedAnswer12 = getSelectedAnswer(answerRadioGroup12);
-                     if ( "Ya".equals(selectedAnswer2)) {
-                        editTextOptionA2 = findViewById(R.id.editTextOptionA2);
-                        String editTextValue2 = editTextOptionA2.getText().toString().trim();
+                    AnswerModel4 answerModel4 = new AnswerModel4();
 
-                        AnswerModel4 answerModel4 = new AnswerModel4();
-                        answerModel4.setAnswer1(selectedAnswer1);
-                        answerModel4.setAnswer2("Ya, " + editTextValue2);
-                        answerModel4.setAnswer3(selectedAnswer3);
-                        answerModel4.setAnswer4(selectedAnswer4);
-                        answerModel4.setAnswer5(selectedAnswer5);
-                        answerModel4.setAnswer6(selectedAnswer6);
-                        answerModel4.setAnswer7(selectedAnswer7);
-                        answerModel4.setAnswer8(selectedAnswer8);
-                        answerModel4.setAnswer9(selectedAnswer9);
-                        answerModel4.setAnswer10(selectedAnswer10);
-                        answerModel4.setAnswer11(selectedAnswer11);
-                        answerModel4.setAnswer12(selectedAnswer12);
-                        saveAnswersToFirebase(answerModel4);
+                    answerModel4.setAnswer1(getSelectedAnswer2(answerRadioGroup1, R.id.editTextOptionA));
+                    answerModel4.setAnswer2(getSelectedAnswer2(answerRadioGroup2, R.id.editTextOptionA2));
+                    answerModel4.setAnswer3(getSelectedAnswer2(answerRadioGroup3, R.id.editTextOptionA3));
+                    answerModel4.setAnswer4(getSelectedAnswer2(answerRadioGroup4, R.id.editTextOptionA4));
+                    answerModel4.setAnswer5(getSelectedAnswer2(answerRadioGroup5, R.id.editTextOptionA5));
+                    answerModel4.setAnswer6(getSelectedAnswer2(answerRadioGroup6, R.id.editTextOptionA6));
+                    answerModel4.setAnswer7(getSelectedAnswer2(answerRadioGroup7, R.id.editTextOptionA7));
+                    answerModel4.setAnswer8(getSelectedAnswer2(answerRadioGroup8, R.id.editTextOptionA8));
+                    answerModel4.setAnswer9(getSelectedAnswer2(answerRadioGroup9, R.id.editTextOptionA9));
+                    answerModel4.setAnswer10(getSelectedAnswer2(answerRadioGroup10, R.id.editTextOptionA10));
+                    answerModel4.setAnswer11(getSelectedAnswer2(answerRadioGroup11, R.id.editTextOptionA11));
+                    answerModel4.setAnswer12(getSelectedAnswer2(answerRadioGroup12, R.id.editTextOptionA12));
 
-
-                    } else if ("Ya".equals(selectedAnswer3)) {
-                        editTextOptionA3 = findViewById(R.id.editTextOptionA3);
-                        String editTextValue3 = editTextOptionA3.getText().toString().trim();
-
-                        AnswerModel4 answerModel4 = new AnswerModel4();
-                        answerModel4.setAnswer1(selectedAnswer1);
-                        answerModel4.setAnswer2(selectedAnswer2);
-                        answerModel4.setAnswer3("Ya, " + editTextValue3);
-                        answerModel4.setAnswer4(selectedAnswer4);
-                        answerModel4.setAnswer5(selectedAnswer5);
-                        answerModel4.setAnswer6(selectedAnswer6);
-                        answerModel4.setAnswer7(selectedAnswer7);
-                        answerModel4.setAnswer8(selectedAnswer8);
-                        answerModel4.setAnswer9(selectedAnswer9);
-                        answerModel4.setAnswer10(selectedAnswer10);
-                        answerModel4.setAnswer11(selectedAnswer11);
-                        answerModel4.setAnswer12(selectedAnswer12);
-                        saveAnswersToFirebase(answerModel4);
-                    } else if ("Ya".equals(selectedAnswer4)) {
-                        editTextOptionA4 = findViewById(R.id.editTextOptionA4);
-                        String editTextValue4 = editTextOptionA4.getText().toString().trim();
-
-                        AnswerModel4 answerModel4 = new AnswerModel4();
-                        answerModel4.setAnswer1(selectedAnswer1);
-                        answerModel4.setAnswer2(selectedAnswer2);
-                        answerModel4.setAnswer3(selectedAnswer3);
-                        answerModel4.setAnswer4("Ya, " + editTextValue4);
-                        answerModel4.setAnswer5(selectedAnswer5);
-                        answerModel4.setAnswer6(selectedAnswer6);
-                        answerModel4.setAnswer7(selectedAnswer7);
-                        answerModel4.setAnswer8(selectedAnswer8);
-                        answerModel4.setAnswer9(selectedAnswer9);
-                        answerModel4.setAnswer10(selectedAnswer10);
-                        answerModel4.setAnswer11(selectedAnswer11);
-                        answerModel4.setAnswer12(selectedAnswer12);
-                        saveAnswersToFirebase(answerModel4);
-                    } else if ("Ya".equals(selectedAnswer5)) {
-                        editTextOptionA5 = findViewById(R.id.editTextOptionA5);
-                        String editTextValue5 = editTextOptionA5.getText().toString().trim();
-
-                        AnswerModel4 answerModel4 = new AnswerModel4();
-                        answerModel4.setAnswer1(selectedAnswer1);
-                        answerModel4.setAnswer2(selectedAnswer2);
-                        answerModel4.setAnswer3(selectedAnswer3);
-                        answerModel4.setAnswer4(selectedAnswer4);
-                        answerModel4.setAnswer5("Ya, " + editTextValue5);
-                        answerModel4.setAnswer6(selectedAnswer6);
-                        answerModel4.setAnswer7(selectedAnswer7);
-                        answerModel4.setAnswer8(selectedAnswer8);
-                        answerModel4.setAnswer9(selectedAnswer9);
-                        answerModel4.setAnswer10(selectedAnswer10);
-                        answerModel4.setAnswer11(selectedAnswer11);
-                        answerModel4.setAnswer12(selectedAnswer12);
-                        saveAnswersToFirebase(answerModel4);
-                    } else if ("Ya".equals(selectedAnswer6)) {
-                        editTextOptionA6 = findViewById(R.id.editTextOptionA6);
-                        String editTextValue6 = editTextOptionA6.getText().toString().trim();
-
-                        AnswerModel4 answerModel4 = new AnswerModel4();
-                        answerModel4.setAnswer1(selectedAnswer1);
-                        answerModel4.setAnswer2(selectedAnswer2);
-                        answerModel4.setAnswer3(selectedAnswer3);
-                        answerModel4.setAnswer4(selectedAnswer4);
-                        answerModel4.setAnswer5(selectedAnswer5);
-                        answerModel4.setAnswer6("Ya, " + editTextValue6);
-                        answerModel4.setAnswer7(selectedAnswer7);
-                        answerModel4.setAnswer8(selectedAnswer8);
-                        answerModel4.setAnswer9(selectedAnswer9);
-                        answerModel4.setAnswer10(selectedAnswer10);
-                        answerModel4.setAnswer11(selectedAnswer11);
-                        answerModel4.setAnswer12(selectedAnswer12);
-                        saveAnswersToFirebase(answerModel4);
-                    } else if ("Ya".equals(selectedAnswer7)) {
-                        editTextOptionA7 = findViewById(R.id.editTextOptionA7);
-                        String editTextValue7 = editTextOptionA7.getText().toString().trim();
-
-                        AnswerModel4 answerModel4 = new AnswerModel4();
-                        answerModel4.setAnswer1(selectedAnswer1);
-                        answerModel4.setAnswer2(selectedAnswer2);
-                        answerModel4.setAnswer3(selectedAnswer3);
-                        answerModel4.setAnswer4(selectedAnswer4);
-                        answerModel4.setAnswer5(selectedAnswer5);
-                        answerModel4.setAnswer6(selectedAnswer6);
-                        answerModel4.setAnswer7("Ya, " + editTextValue7);
-                        answerModel4.setAnswer8(selectedAnswer8);
-                        answerModel4.setAnswer9(selectedAnswer9);
-                        answerModel4.setAnswer10(selectedAnswer10);
-                        answerModel4.setAnswer11(selectedAnswer11);
-                        answerModel4.setAnswer12(selectedAnswer12);
-                        saveAnswersToFirebase(answerModel4);
-                    } else if ("Ya".equals(selectedAnswer8)) {
-                        editTextOptionA8 = findViewById(R.id.editTextOptionA8);
-                        String editTextValue8 = editTextOptionA8.getText().toString().trim();
-                        AnswerModel4 answerModel4 = new AnswerModel4();
-                        answerModel4.setAnswer1(selectedAnswer1);
-                        answerModel4.setAnswer2(selectedAnswer2);
-                        answerModel4.setAnswer3(selectedAnswer3);
-                        answerModel4.setAnswer4(selectedAnswer4);
-                        answerModel4.setAnswer5(selectedAnswer5);
-                        answerModel4.setAnswer6(selectedAnswer6);
-                        answerModel4.setAnswer7(selectedAnswer7);
-                        answerModel4.setAnswer8("Ya, " + editTextValue8);
-                        answerModel4.setAnswer9(selectedAnswer9);
-                        answerModel4.setAnswer10(selectedAnswer10);
-                        answerModel4.setAnswer11(selectedAnswer11);
-                        answerModel4.setAnswer12(selectedAnswer12);
-                        saveAnswersToFirebase(answerModel4);
-
-                    }else if("Ya".equals(selectedAnswer9)){
-                        editTextOptionA9 = findViewById(R.id.editTextOptionA9);
-                        String editTextValue9 = editTextOptionA9.getText().toString().trim();
-                        AnswerModel4 answerModel4 = new AnswerModel4();
-                        answerModel4.setAnswer1(selectedAnswer1);
-                        answerModel4.setAnswer2(selectedAnswer2);
-                        answerModel4.setAnswer3(selectedAnswer3);
-                        answerModel4.setAnswer4(selectedAnswer4);
-                        answerModel4.setAnswer5(selectedAnswer5);
-                        answerModel4.setAnswer6(selectedAnswer6);
-                        answerModel4.setAnswer7(selectedAnswer7);
-                        answerModel4.setAnswer8(selectedAnswer8);
-                        answerModel4.setAnswer9("Ya, " + editTextValue9);
-                        answerModel4.setAnswer10(selectedAnswer10);
-                        answerModel4.setAnswer11(selectedAnswer11);
-                        answerModel4.setAnswer12(selectedAnswer12);
-                        saveAnswersToFirebase(answerModel4);
-                    }else if("Ya".equals(selectedAnswer10)){
-                        editTextOptionA10 = findViewById(R.id.editTextOptionA10);
-                        String editTextValue10 = editTextOptionA10.getText().toString().trim();
-                        AnswerModel4 answerModel4 = new AnswerModel4();
-                        answerModel4.setAnswer1(selectedAnswer1);
-                        answerModel4.setAnswer2(selectedAnswer2);
-                        answerModel4.setAnswer3(selectedAnswer3);
-                        answerModel4.setAnswer4(selectedAnswer4);
-                        answerModel4.setAnswer5(selectedAnswer5);
-                        answerModel4.setAnswer6(selectedAnswer6);
-                        answerModel4.setAnswer7(selectedAnswer7);
-                        answerModel4.setAnswer8(selectedAnswer8);
-                        answerModel4.setAnswer9(selectedAnswer9);
-                        answerModel4.setAnswer10("Ya, " + editTextValue10);
-                        answerModel4.setAnswer11(selectedAnswer11);
-                        answerModel4.setAnswer12(selectedAnswer12);
-                        saveAnswersToFirebase(answerModel4);
-
-                    } else if ( "Ya".equals(selectedAnswer11)) {
-                        editTextOptionA11 = findViewById(R.id.editTextOptionA11);
-                        String editTextValue11 = editTextOptionA11.getText().toString().trim();
-                        AnswerModel4 answerModel4 = new AnswerModel4();
-                        answerModel4.setAnswer1(selectedAnswer1);
-                        answerModel4.setAnswer2(selectedAnswer2);
-                        answerModel4.setAnswer3(selectedAnswer3);
-                        answerModel4.setAnswer4(selectedAnswer4);
-                        answerModel4.setAnswer5(selectedAnswer5);
-                        answerModel4.setAnswer6(selectedAnswer6);
-                        answerModel4.setAnswer7(selectedAnswer7);
-                        answerModel4.setAnswer8(selectedAnswer8);
-                        answerModel4.setAnswer9(selectedAnswer9);
-                        answerModel4.setAnswer10(selectedAnswer10);
-                        answerModel4.setAnswer11("Ya, " + editTextValue11);
-                        answerModel4.setAnswer12(selectedAnswer12);
-                        saveAnswersToFirebase(answerModel4);
-                    } else if ("Ya".equals(selectedAnswer12)) {
-                        editTextOptionA12 = findViewById(R.id.editTextOptionA12);
-                        String editTextValue12 = editTextOptionA12.getText().toString().trim();
-                        AnswerModel4 answerModel4 = new AnswerModel4();
-                        answerModel4.setAnswer1(selectedAnswer1);
-                        answerModel4.setAnswer2(selectedAnswer2);
-                        answerModel4.setAnswer3(selectedAnswer3);
-                        answerModel4.setAnswer4(selectedAnswer4);
-                        answerModel4.setAnswer5(selectedAnswer5);
-                        answerModel4.setAnswer6(selectedAnswer6);
-                        answerModel4.setAnswer7(selectedAnswer7);
-                        answerModel4.setAnswer8(selectedAnswer8);
-                        answerModel4.setAnswer9(selectedAnswer9);
-                        answerModel4.setAnswer10(selectedAnswer10);
-                        answerModel4.setAnswer11(selectedAnswer11);
-                        answerModel4.setAnswer12("Ya, " + editTextValue12);
-                        saveAnswersToFirebase(answerModel4);
-                    } else {
-                        AnswerModel4 answerModel4 = new AnswerModel4();
-                        answerModel4.setAnswer1(selectedAnswer1);
-                        answerModel4.setAnswer2(selectedAnswer2);
-                        answerModel4.setAnswer3(selectedAnswer3);
-                        answerModel4.setAnswer4(selectedAnswer4);
-                        answerModel4.setAnswer5(selectedAnswer5);
-                        answerModel4.setAnswer6(selectedAnswer6);
-                        answerModel4.setAnswer7(selectedAnswer7);
-                        answerModel4.setAnswer8(selectedAnswer8);
-                        answerModel4.setAnswer9(selectedAnswer9);
-                        answerModel4.setAnswer10(selectedAnswer10);
-                        answerModel4.setAnswer11(selectedAnswer11);
-                        answerModel4.setAnswer12(selectedAnswer12);
-
-                        // Save the data to Firebase
-                        saveAnswersToFirebase(answerModel4);
-
-                    }
+                    saveAnswersToFirebase(answerModel4);
 
                 }
 
             }
         });
+
+    }
+    private String getSelectedAnswer2(RadioGroup radioGroup, int editTextId) {
+        int selectedId = radioGroup.getCheckedRadioButtonId();
+        String answer = "";
+        if (selectedId != -1) {
+            RadioButton radioButton = findViewById(selectedId);
+            answer = radioButton.getText().toString();
+        }
+
+        EditText editText = findViewById(editTextId);
+        String editTextValue = editText.getText().toString().trim();
+
+        if (!editTextValue.isEmpty()) {
+            answer = (answer.isEmpty() ? "" : " ") + editTextValue;
+        }
+
+        return answer;
+    }
+    private String getSelectedAnswer(RadioGroup radioGroup, int editTextId) {
+        int selectedId = radioGroup.getCheckedRadioButtonId();
+        String answer = "";
+        if (selectedId != -1) {
+            RadioButton radioButton = findViewById(selectedId);
+            answer = radioButton.getText().toString();
+        }
+
+        EditText editText = findViewById(editTextId);
+        String editTextValue = editText.getText().toString().trim();
+
+        if (!editTextValue.isEmpty()) {
+            answer = (answer.isEmpty() ? "" : ", ") + editTextValue;
+        }
+
+        return answer;
     }
     private String getSelectedAnswer(RadioGroup radioGroup) {
         int selectedId = radioGroup.getCheckedRadioButtonId();
@@ -683,7 +521,7 @@ public class question4 extends AppCompatActivity {
                     Log.d("FirebaseData2", "Child Key: " + childkey4);
                     Log.d("FirebaseData2", "Answer Model: " + answerModel.toString());
                     Toast.makeText(getApplicationContext(), "total score :" + calctotalscore4, Toast.LENGTH_SHORT).show();
-                    Toast.makeText(getApplicationContext(), "key:" + childkey4, Toast.LENGTH_SHORT).show();
+                  //  Toast.makeText(getApplicationContext(), "key:" + childkey4, Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(question4.this, question5.class);
                     intent.putExtra("score2", score2);
                     intent.putExtra("childkey2",childkey2);
@@ -693,6 +531,9 @@ public class question4 extends AppCompatActivity {
                     intent.putExtra("childkey3",childkey3);
                     intent.putExtra("score4", calctotalscore4);
                     intent.putExtra("childkey4",childkey4);
+                    intent.putExtra("childkeyPatient", patientChildkey);
+                    intent.putExtra("childkeystatust", statusChildkey);
+                    Log.d("Childkeystatonq4", "onDataChange: " + statusChildkey);
                     startActivity(intent);
                 }
             }

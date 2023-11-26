@@ -56,13 +56,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Not identified" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextOptionA"
+                android:visibility="gone"/>
 
 
         </RadioGroup>
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="190dp"
+            android:layout_marginTop="210dp"
             >
             <TextView
                 android:layout_width="wrap_content"
@@ -115,7 +120,7 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="410dp"
+            android:layout_marginTop="420dp"
             >
             <TextView
                 android:layout_width="wrap_content"
@@ -166,7 +171,7 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="620dp"
+            android:layout_marginTop="630dp"
             >
             <TextView
                 android:layout_width="wrap_content"
@@ -218,7 +223,7 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="830dp"
+            android:layout_marginTop="850dp"
             >
             <TextView
                 android:layout_width="wrap_content"
@@ -269,7 +274,7 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="1030dp"
+            android:layout_marginTop="1065dp"
             >
             <TextView
                 android:layout_width="wrap_content"
@@ -321,7 +326,7 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="1240dp"
+            android:layout_marginTop="1280dp"
             >
             <TextView
                 android:layout_width="wrap_content"
@@ -372,7 +377,7 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="1445dp"
+            android:layout_marginTop="1490dp"
             >
             <TextView
                 android:layout_width="wrap_content"
@@ -423,7 +428,7 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="1650dp"
+            android:layout_marginTop="1710dp"
             >
             <TextView
                 android:layout_width="wrap_content"
@@ -474,7 +479,7 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="1870dp"
+            android:layout_marginTop="1940dp"
             >
             <TextView
                 android:layout_width="wrap_content"
@@ -525,7 +530,7 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2080dp"
+            android:layout_marginTop="2150dp"
             >
             <TextView
                 android:layout_width="wrap_content"
@@ -555,7 +560,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:visibility="gone"
-                    android:hint="apa tindakan yang dilakukan"/>
+                    android:hint="apa kelainan yang diderita"/>
 
 
                 <RadioButton
@@ -576,7 +581,7 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2270dp"
+            android:layout_marginTop="2360dp"
             >
 
             <TextView
@@ -586,7 +591,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="70dp"
                 android:text="Penyakit kelainan mental"
-                android:textSize="14dp"></TextView>
+                android:textSize="14dp"/>
 
             <RadioGroup
                 android:id="@+id/answerRadioGroup12"
@@ -629,7 +634,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="2570dp"
+            android:layout_marginTop="2650dp"
             android:text="Continue"
             />
 

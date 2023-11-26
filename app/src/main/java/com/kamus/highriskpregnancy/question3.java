@@ -45,6 +45,8 @@ public class question3 extends AppCompatActivity {
     String childkey2;
     String childkey1;
     String childkey3;
+    String patientChildkey;
+    String statusChildkey;
 
 
 
@@ -54,14 +56,18 @@ public class question3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question3);
         Intent intent = getIntent();
+        patientChildkey = intent.getStringExtra("childkeyPatient");
+
         score1 = intent.getIntExtra("score1", 0);
         childkey1 = intent.getStringExtra("childkey1");
         childkey2 = intent.getStringExtra("childkey2");
+        statusChildkey = intent.getStringExtra("childkeystatust");
+        Log.d("Childkeystatonq3", "onDataChange: " + statusChildkey);
         score2 = intent.getIntExtra("score2",0);
         Toast.makeText(this,"score 1 = " +score1, Toast.LENGTH_SHORT).show();
-        Toast.makeText(this,"childkey 1 = " +childkey1, Toast.LENGTH_SHORT).show();
+     //   Toast.makeText(this,"childkey 1 = " +childkey1, Toast.LENGTH_SHORT).show();
         Toast.makeText(this,"score 2 = " +score2, Toast.LENGTH_SHORT).show();
-        Toast.makeText(this,"childkey 2 = " +childkey2, Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this,"childkey 2 = " +childkey2, Toast.LENGTH_SHORT).show();
 
         continueButton = findViewById(R.id.continueButton);
         answerRadioGroup = findViewById(R.id.answerRadioGroup);
@@ -194,93 +200,45 @@ public class question3 extends AppCompatActivity {
                     String selectedAnswer10 = getSelectedAnswer(answerRadioGroup10);
                     String selectedAnswer11 = getSelectedAnswer(answerRadioGroup11);
                     String selectedAnswer12 = getSelectedAnswer(answerRadioGroup12);
+                    AnswerModel3 answerModel3 = new AnswerModel3();
+                    answerModel3.setAnswer1(selectedAnswer1);
+                    answerModel3.setAnswer2(selectedAnswer2);
+                    answerModel3.setAnswer3(selectedAnswer3);
+                    answerModel3.setAnswer4(selectedAnswer4);
+                    answerModel3.setAnswer5(selectedAnswer5);
+                    answerModel3.setAnswer6(selectedAnswer6);
+                    answerModel3.setAnswer7(selectedAnswer7);
+                    answerModel3.setAnswer8(selectedAnswer8);
+                    answerModel3.setAnswer9(selectedAnswer9);
+                    answerModel3.setAnswer10(selectedAnswer10);
+                    answerModel3.setAnswer11(selectedAnswer11);
+                    answerModel3.setAnswer12(selectedAnswer12);
                     if ("Ya".equals(selectedAnswer1)) {
                         editTextOptionA = findViewById(R.id.editTextOptionA);
                         String editTextValue1 = editTextOptionA.getText().toString().trim();
-
-                        AnswerModel3 answerModel3 = new AnswerModel3();
-                        answerModel3.setAnswer1("Ya" + editTextValue1);
-                        answerModel3.setAnswer2(selectedAnswer2);
-                        answerModel3.setAnswer3(selectedAnswer3);
-                        answerModel3.setAnswer4(selectedAnswer4);
-                        answerModel3.setAnswer5(selectedAnswer5);
-                        answerModel3.setAnswer6(selectedAnswer6);
-                        answerModel3.setAnswer7(selectedAnswer7);
-                        answerModel3.setAnswer8(selectedAnswer8);
-                        answerModel3.setAnswer9(selectedAnswer9);
-                        answerModel3.setAnswer10(selectedAnswer10);
-                        answerModel3.setAnswer11(selectedAnswer11);
-                        answerModel3.setAnswer12(selectedAnswer12);
+                        answerModel3.setAnswer1(editTextValue1);
 
 
                         // Save the data to Firebase
-                        saveAnswersToFirebase(answerModel3);
 
-
-                    } else if ( "Ya".equals(selectedAnswer5)) {
-                        editTextOptionA5 = findViewById(R.id.editTextOptionA5);
-                        String editTextValue5 = editTextOptionA5.getText().toString().trim();
-
-                        AnswerModel3 answerModel3 = new AnswerModel3();
-                        answerModel3.setAnswer1(selectedAnswer1);
-                        answerModel3.setAnswer2(selectedAnswer2);
-                        answerModel3.setAnswer3(selectedAnswer3);
-                        answerModel3.setAnswer4(selectedAnswer4);
-                        answerModel3.setAnswer5("Ya" + editTextValue5);
-                        answerModel3.setAnswer6(selectedAnswer6);
-                        answerModel3.setAnswer7(selectedAnswer7);
-                        answerModel3.setAnswer8(selectedAnswer8);
-                        answerModel3.setAnswer9(selectedAnswer9);
-                        answerModel3.setAnswer10(selectedAnswer10);
-                        answerModel3.setAnswer11(selectedAnswer11);
-                        answerModel3.setAnswer12(selectedAnswer12);
-
-
-                        // Save the data to Firebase
-                        saveAnswersToFirebase(answerModel3);
-
-
-                    } else if ("Ya".equals(selectedAnswer5)) {
-                        editTextOptionA12 = findViewById(R.id.editTextOptionA12);
-                        String editTextValue12 = editTextOptionA12.getText().toString().trim();
-
-                        AnswerModel3 answerModel3 = new AnswerModel3();
-                        answerModel3.setAnswer1(selectedAnswer1);
-                        answerModel3.setAnswer2(selectedAnswer2);
-                        answerModel3.setAnswer3(selectedAnswer3);
-                        answerModel3.setAnswer4(selectedAnswer4);
-                        answerModel3.setAnswer5(selectedAnswer5);
-                        answerModel3.setAnswer6(selectedAnswer6);
-                        answerModel3.setAnswer7(selectedAnswer7);
-                        answerModel3.setAnswer8(selectedAnswer8);
-                        answerModel3.setAnswer9(selectedAnswer9);
-                        answerModel3.setAnswer10(selectedAnswer10);
-                        answerModel3.setAnswer11(selectedAnswer11);
-                        answerModel3.setAnswer12("Ya" + editTextValue12);
-
-
-                        // Save the data to Firebase
-                        saveAnswersToFirebase(answerModel3);
-                        
-                    } else {
-                        AnswerModel3 answerModel3 = new AnswerModel3();
-                        answerModel3.setAnswer1(selectedAnswer1);
-                        answerModel3.setAnswer2(selectedAnswer2);
-                        answerModel3.setAnswer3(selectedAnswer3);
-                        answerModel3.setAnswer4(selectedAnswer4);
-                        answerModel3.setAnswer5(selectedAnswer5);
-                        answerModel3.setAnswer6(selectedAnswer6);
-                        answerModel3.setAnswer7(selectedAnswer7);
-                        answerModel3.setAnswer8(selectedAnswer8);
-                        answerModel3.setAnswer9(selectedAnswer9);
-                        answerModel3.setAnswer10(selectedAnswer10);
-                        answerModel3.setAnswer11(selectedAnswer11);
-                        answerModel3.setAnswer12(selectedAnswer12);
-
-                        // Save the data to Firebase
-                        saveAnswersToFirebase(answerModel3);
 
                     }
+                    if ( "Ya".equals(selectedAnswer5)) {
+                        editTextOptionA5 = findViewById(R.id.editTextOptionA5);
+                        String editTextValue5 = editTextOptionA5.getText().toString().trim();
+                        answerModel3.setAnswer5(editTextValue5);
+
+
+                    }
+                    if ("Ya".equals(selectedAnswer5)) {
+                        editTextOptionA12 = findViewById(R.id.edittextanswerA12);
+                        String editTextValue12 = editTextOptionA12.getText().toString().trim();
+                        answerModel3.setAnswer12(editTextValue12);
+                        // Save the data to Firebase
+
+                    }
+                        // Save the data to Firebase
+                        saveAnswersToFirebase(answerModel3);
 
                 }
 
@@ -552,7 +510,7 @@ public class question3 extends AppCompatActivity {
                     Log.d("FirebaseData2", "Child Key: " + childkey3);
                     Log.d("FirebaseData2", "Answer Model: " + answerModel.toString());
                     Toast.makeText(getApplicationContext(), "total score :" + calctotalscore3, Toast.LENGTH_SHORT).show();
-                    Toast.makeText(getApplicationContext(), "key:" + childkey3, Toast.LENGTH_SHORT).show();
+                  //  Toast.makeText(getApplicationContext(), "key:" + childkey3, Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(question3.this, question4.class);
                     intent.putExtra("score2", score2);
                     intent.putExtra("childkey2",childkey2);
@@ -560,6 +518,9 @@ public class question3 extends AppCompatActivity {
                     intent.putExtra("childkey1",childkey1);
                     intent.putExtra("score3", calctotalscore3);
                     intent.putExtra("childkey3",childkey3);
+                    intent.putExtra("childkeyPatient", patientChildkey);
+                    intent.putExtra("childkeystatust", statusChildkey);
+                    Log.d("Childkeystatonq3", "onDataChange: " + statusChildkey);
                    startActivity(intent);
                 }
             }

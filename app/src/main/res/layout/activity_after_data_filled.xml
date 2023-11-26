@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".afterDataFilled">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/texttentukan"
+        android:text="Tentukan status kehamilan ibu (GaPbcde)"
+        android:textSize="14dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp">
+
+    </TextView>
+
+
+    <EditText
+        android:id="@+id/editText_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_below="@id/texttentukan"
+        android:layout_marginTop="70dp"
+        android:hint="a: Jumlah kehamilan keberapa(dalam angka)" />
+
+    <EditText
+        android:id="@+id/editText_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText_a"
+        android:hint="b: Jumlah bayi lahir cukup bulan (diatas 37 minggu)(dalam angka)" />
+
+    <EditText
+        android:id="@+id/editText_c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText_b"
+        android:hint="c: Jumlah bayi lahir kurang bulan (21 - 37 minggu)(dalam angka)" />
+
+    <EditText
+        android:id="@+id/editText_d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText_c"
+        android:hint="d: Jumlah keguguran/hamil luar rahim/mola (dibawah 21 minggu)(dalam angka)" />
+
+    <EditText
+        android:id="@+id/editText_e"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText_d"
+        android:hint="e: Jumlah anak hidup(dalam angka)" />
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText_e"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:text="Calculate Status" />
+
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText_e"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:textSize="18sp" />
+    <Button
+        android:id="@+id/continueButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText_e"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:text="Continue"
+        android:visibility="gone">
+
+    </Button>
+</RelativeLayout>

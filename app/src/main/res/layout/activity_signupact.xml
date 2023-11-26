@@ -36,7 +36,7 @@
             android:id="@+id/textNama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nama"
+            android:text="Nama dan Gelar"
             tools:layout_editor_absoluteX="41dp"
             tools:layout_editor_absoluteY="204dp"
             android:textSize="15dp"
@@ -97,7 +97,7 @@
             android:id="@+id/buttonsignup"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="300dp"
+            android:layout_marginTop="100dp"
             android:text="Sign up"
             android:layout_marginLeft="45dp"/>
 

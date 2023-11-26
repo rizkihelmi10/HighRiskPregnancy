@@ -31,10 +31,10 @@ public class AnswerModel5 {
         this.answer1 = answer1;
     }
     public String getAnswer13() {
-        return answer1;
+        return answer13;
     }
 
-    public void setAnswer13(String answer1) {
+    public void setAnswer13(String answer13) {
         this.answer13 = answer13;
     }
 

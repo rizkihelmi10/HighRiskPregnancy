@@ -39,7 +39,7 @@ public class question1 extends AppCompatActivity {
             optionA4, optionB4, optionC4, optionD4, optionE4, optionF4,
             optionA5, optionB5,
             optionA6, optionB6,
-            optionA7, optionB7, optionC7, optionA8, optionB8;
+            optionA7, optionB7, optionC7,optionD7, optionA8, optionB8;
 
     private Button continueButton, resetbutton1, resetbutton2;
     private EditText editTextOptionD3, editTextOptionF3, editTextOptionE3, editTextOptionD4, editTextOptionF4, editTextOptionE4,editTextForCheckBox1,editTextForCheckBox2;
@@ -51,6 +51,8 @@ public class question1 extends AppCompatActivity {
     private int lastCheckedId = -1;
     private RadioButton lastSelectedRadioButton = null;
     String childKey;
+    String patientChildkey;
+    String statusChildkey;
 
 
 
@@ -60,6 +62,10 @@ public class question1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         FirebaseApp.initializeApp(this);
         setContentView(R.layout.activity_question1);
+        Intent intent = getIntent();
+        patientChildkey = intent.getStringExtra("childkeyPatient");
+        statusChildkey = intent.getStringExtra("childkeystatus");
+        Log.d("Childkeystatonq1", "onDataChange: " + statusChildkey);
         // Initialize Views
         questionTextView1 = findViewById(R.id.questionTextView1);
         questionTextView2 = findViewById(R.id.questionTextView2);
@@ -117,6 +123,7 @@ public class question1 extends AppCompatActivity {
         optionA7 = findViewById(R.id.optionA7);
         optionB7 = findViewById(R.id.optionB7);
         optionC7 = findViewById(R.id.optionC7);
+        optionD7 = findViewById(R.id.optionD7);
         optionA8 = findViewById(R.id.optionA8);
         optionB8 = findViewById(R.id.optionB8);
 
@@ -563,11 +570,12 @@ public class question1 extends AppCompatActivity {
         radioButtonScores.put(optionF4, 2);
         radioButtonScores.put(optionA5, 2);
         radioButtonScores.put(optionB5, 0);
-        radioButtonScores.put(optionA6, 3);
-        radioButtonScores.put(optionB6, 0);
+        radioButtonScores.put(optionA6, 0);
+        radioButtonScores.put(optionB6, 3);
         radioButtonScores.put(optionA7, 4);
         radioButtonScores.put(optionB7, 4);
-        radioButtonScores.put(optionC7, 0);
+        radioButtonScores.put(optionC7, 4);
+        radioButtonScores.put(optionD7, 0);
         radioButtonScores.put(optionA8, 4);
         radioButtonScores.put(optionB8,0);
          calctotalscore = 0;
@@ -626,10 +634,14 @@ public class question1 extends AppCompatActivity {
                     Log.d("FirebaseData", "Child Key: " + childKey);
                     Log.d("FirebaseData", "Answer Model: " + answerModel.toString());
                     Toast.makeText(getApplicationContext(), "total score :" + calctotalscore, Toast.LENGTH_SHORT).show();
-                    Toast.makeText(getApplicationContext(), "key:" + childKey, Toast.LENGTH_SHORT).show();
+                  //  Toast.makeText(getApplicationContext(), "key:" + childKey, Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(question1.this, question2.class);
                     intent.putExtra("score1", calctotalscore);
                     intent.putExtra("childkey1",childKey);
+                    intent.putExtra("childkeyPatient", patientChildkey);
+
+                    intent.putExtra("childkeystatus", statusChildkey);
+                    Log.d("Childkeystatonq1", "onDataChange: " + statusChildkey);
                     startActivity(intent);
                 }
             }
